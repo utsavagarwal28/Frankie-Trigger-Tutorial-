@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    enum State { Idle, Run }
+    enum State { Idle, Run, Warzone }
 
     [Header("Elements")]
     [SerializeField] private PlayerAnimator playerAnimator;
@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float moveSpeed;
     private State state;
-
+    private Warzone currentWarzone;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
             case State.Run:
                 Move();
                 break;
+
+            case State.Warzone:
+                ManageWarzoneState();
+                break;
         }
     }
 
@@ -54,6 +58,22 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+    }
+
+    public void EnteredWarzoneCallback(Warzone warzone)
+    {
+        if (currentWarzone !=null)
+            return;
+
+        state = State.Warzone;
+        currentWarzone = warzone;
+
+        Debug.Log("EnteredWarzone");
+    }
+
+    private void ManageWarzoneState()
+    {
+
     }
 
 }
