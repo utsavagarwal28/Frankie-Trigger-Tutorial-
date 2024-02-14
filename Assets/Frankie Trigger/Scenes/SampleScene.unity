@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &31942649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31942650}
+  - component: {fileID: 31942651}
+  m_Layer: 0
+  m_Name: Warzone_00
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &31942650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31942649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.83, y: 2.66, z: -2.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2059004652}
+  - {fileID: 734897032}
+  m_Father: {fileID: 1613035332}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &31942651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31942649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40687601a7263d3498f17cb6f415d4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpline: {fileID: 2059004651}
 --- !u!1 &226195208
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,8 +467,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.074376225, y: -0.00000000428968, z: -3.1993636e-10, w: 0.9972303}
-  m_LocalPosition: {x: -3.9512491, y: 4.2060995, z: -12.528595}
+  m_LocalRotation: {x: -0.074376225, y: 0.00000000428968, z: 3.1993636e-10, w: 0.9972303}
+  m_LocalPosition: {x: 2.68, y: -1.1800001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -743,7 +790,7 @@ GameObject:
   - component: {fileID: 734897029}
   m_Layer: 0
   m_Name: Warzon Trigger
-  m_TagString: Untagged
+  m_TagString: WarzoneEnter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,11 +877,11 @@ Transform:
   m_GameObject: {fileID: 734897028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 31942650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800235987
 GameObject:
@@ -900,8 +947,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800235987}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.074376225, y: -0.00000000428968, z: -3.1993636e-10, w: 0.9972303}
-  m_LocalPosition: {x: -3.9512491, y: 4.2060995, z: -12.528595}
+  m_LocalRotation: {x: -0.074376225, y: 0.00000000428968, z: 3.1993636e-10, w: 0.9972303}
+  m_LocalPosition: {x: 2.68, y: -1.1800001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1014,6 +1061,7 @@ GameObject:
   - component: {fileID: 1404793630}
   - component: {fileID: 1404793629}
   - component: {fileID: 1404793631}
+  - component: {fileID: 1404793632}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1035,6 +1083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 1404793631}
   moveSpeed: 3
+  splinePercent: 0
 --- !u!4 &1404793630
 Transform:
   m_ObjectHideFlags: 0
@@ -1043,8 +1092,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404793628}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.451249, y: 2.7060995, z: -2.5285952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.25, y: 2.71, z: -2.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1064,6 +1113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3112971031964336316}
+--- !u!114 &1404793632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404793628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c71e11a9759f7e43a22950844888165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 0.25
 --- !u!1 &1613035331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1151,7 @@ Transform:
   m_GameObject: {fileID: 1613035331}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.451249, y: -2.7060995, z: 2.5285952}
+  m_LocalPosition: {x: 3.76, y: -2.66, z: 2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1097,6 +1159,7 @@ Transform:
   - {fileID: 468047113}
   - {fileID: 244268590}
   - {fileID: 226195212}
+  - {fileID: 31942650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629012321
@@ -1124,7 +1187,7 @@ Transform:
   m_GameObject: {fileID: 1629012321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.451249, y: -2.7060995, z: 2.5285952}
+  m_LocalPosition: {x: -3.67, y: 2.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1259,11 +1322,11 @@ Transform:
   m_GameObject: {fileID: 2059004650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4481571, y: 0.00000047683716, z: 0.27169514}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 31942650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &30115787435409383
 GameObject:
@@ -2762,5 +2825,3 @@ SceneRoots:
   m_Roots:
   - {fileID: 1629012322}
   - {fileID: 1613035332}
-  - {fileID: 2059004652}
-  - {fileID: 734897032}
