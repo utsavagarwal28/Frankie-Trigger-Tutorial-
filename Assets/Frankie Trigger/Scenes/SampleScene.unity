@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4d0e0ffc7a6c1bf44b435e0b23260f8c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.074376225, y: 0.00000000428968, z: 3.1993636e-10, w: 0.9972303}
+  m_LocalRotation: {x: -0.07437623, y: -0.000000004289682, z: -3.1993652e-10, w: 0.9972303}
   m_LocalPosition: {x: 2.68, y: -1.1800001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -947,7 +947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800235987}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.074376225, y: 0.00000000428968, z: 3.1993636e-10, w: 0.9972303}
+  m_LocalRotation: {x: -0.07437623, y: -0.000000004289682, z: -3.1993652e-10, w: 0.9972303}
   m_LocalPosition: {x: 2.68, y: -1.1800001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 1404793631}
   moveSpeed: 3
-  splinePercent: 0
+  warzoneTimmer: 0
 --- !u!4 &1404793630
 Transform:
   m_ObjectHideFlags: 0
